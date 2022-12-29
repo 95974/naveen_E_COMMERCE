@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    
+    
+</script>
+
+
+
+
+<script>
+    function tl() {
+  var x = document.getElementById("tb").rows[1].cells;
+  document.getElementById("demo").innerHTML = x[1].innerHTML;
+}
+function remove(){
+    document.getElementById("tb").deleteRow(0)
+}
+function ins(){
+   let x= document.getElementById("tb").insertRow(0);
+    var o=x.insertCell(0);
+    var l=x.insertCell(1);
+   o.innerHTML="new";
+   l.innerHTML="new1";
+}
+</script>
+<body>
+    <table id="tb">
+        
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>four</td>
+        </tr>
+    </table>
+    <button onclick="tl()">click</button>
+    <button onclick="remove()">remove</button>
+  <button onclick="ins()">insert</button>  <p id="demo"></p>
+</body>
+</html>
